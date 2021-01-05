@@ -9,13 +9,18 @@ import UIKit
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        cell.textLabel?.text = "row: \(indexPath.row)"
+        let movie = movies[indexPath.row]
+        let title = movie["title"] as! String
+        
+        //cell.textLabel!.text = "row: \(indexPath.row)"
+        cell.textLabel!.text = title
+        
         return cell
     }
     
@@ -45,6 +50,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
             
             self.movies = dataDictionary["results"] as! [[String:Any]]
+            
+            self.tableView.reloadData()
             
             print(dataDictionary)
               // TODO: Get the array of movies
