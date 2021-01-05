@@ -51,6 +51,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             
             self.movies = dataDictionary["results"] as! [[String:Any]]
             
+            //reloads data
             self.tableView.reloadData()
             
             print(dataDictionary)
