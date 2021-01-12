@@ -35,7 +35,7 @@ Describe any challenges encountered while building the app.
 - [ ] (2pt) User can view the app on various device sizes and orientations.
 - [ ] (1pt) Run your app on a real device.
 
-<img src="Flixster.gif" width=250><br>
+<img src="Flixster2.gif" width=250><br>
 
 ### Notes
 Describe any challenges encountered while building the app.
